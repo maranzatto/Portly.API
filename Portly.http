@@ -1,0 +1,35 @@
+@Portly_HostAddress = https://localhost:5000
+
+### Create Visitor
+POST {{Portly_HostAddress}}/api/v1/admin/visitor
+Content-Type: application/json
+
+{
+  "fullName": "João Silva",
+  "document": "12345678901",
+  "phone": "11987654321",
+  "email": "joao@example.com"
+}
+
+### Get All Visitors
+GET {{Portly_HostAddress}}/api/v1/admin/visitor
+
+### Get Visitor by ID
+GET {{Portly_HostAddress}}/api/v1/admin/visitor/{{visitorId}}
+
+### Update Visitor
+PUT {{Portly_HostAddress}}/api/v1/admin/visitor/{{visitorId}}
+Content-Type: application/json
+
+{
+  "fullName": "João Silva",
+  "document": "12345678901",
+  "phone": "11987654321",
+  "email": "joao@example.com"
+}
+
+### Delete Visitor
+DELETE {{Portly_HostAddress}}/api/v1/admin/visitor/{{visitorId}}
+
+### Restore Visitor
+POST {{Portly_HostAddress}}/api/v1/admin/visitor/{{visitorId}}/restore
